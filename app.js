@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const server = express()
 const main = require('./src/main')
@@ -8,10 +9,11 @@ async function init() {
       await db.connect()
       server.use(express.urlencoded({ extended: true }))
       server.use(express.json())
-      server.use(main)
+      server.use('/images', express.static('images'))
+      server.use('/api/v1', main)
 
-      server.listen(8080, () => {
-         console.log('Sever ready')
+      server.listen(process.env.APP_PORT, () => {
+         console.log(`running ready on ${process.env.APP_PORT}`)
       })
    } catch (error) {
       console.log(error)
