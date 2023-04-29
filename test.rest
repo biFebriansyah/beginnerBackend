@@ -40,3 +40,5 @@ Content-Type: application/json
   "password": "abcd1234"
 }
 
+###
+GET http://localhost:9091/bootcamp HTTP/1.1

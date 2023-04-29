@@ -12,7 +12,7 @@ const auth_validate = (req, res, next) => {
       if (err) {
          return respone(res, 401, err, true)
       } else {
-         console.log(decode)
+         req.user = decode.username
          next()
       }
    })

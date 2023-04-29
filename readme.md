@@ -35,8 +35,8 @@ npm start
 
 ## 💻 Built with
 
--   [Nodejs](https://nodejs.org/en/)
--   [Expressjs](https://expressjs.com/): for handle http method
+-   [Nodejs](https://nodejs.org/en/): JavaScript runtime
+-   [Expressjs](https://expressjs.com/): JavaScript framework
 -   [Postgres](https://www.postgresql.org/): for DBMS
 
 <hr>
